@@ -1,0 +1,35 @@
+{
+    "short_name": "Kulty",
+    "name": "Kulty",
+    "description": "Une application regroupant toutes les expositions parisiennes.",
+    "version": "0.0.0",
+    "icons": [
+        {
+            "src": "assets/logo/logo96_ios.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },{
+            "src": "assets/logo/logo128_ios.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },{
+            "src": "assets/logo/logo192_ios.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },{
+            "src": "assets/logo/logo384_ios.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },{
+            "src": "assets/logo/logo512_ios.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#7f0f00",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#db0500"
+}

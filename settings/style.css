@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'SFUI', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    position: relative;
+    background-color: #DB0500;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    padding-bottom: 5rem;
+}
+
+.fond {
+    position: fixed;
+    overflow: hidden;
+    right: -70px;
+    top: -50px;
+    z-index: -1;
+    width: 180px;
+}
+
+.back {
+    position: absolute;
+    padding: 2.9rem 0;
+}
+.back img {
+    width: 40px;
+}
+
+
+main h1 {
+    color: #ffffff;
+    padding: 3rem 0;
+    padding-left: 3.75rem;
+    margin: 0;
+}
+
+.button-icon {
+    width: 25px;
+    margin: 0 1.1rem;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    position: relative;
+    height: 70px;
+    padding-right: 5rem;
+}
+
+.button-arrow {
+    width: 35px;
+    position: absolute;
+    right: 0;
+    margin-right: 1.2rem;
+}
+
+hr {
+    width: 90vw;
+    border: 1px solid #ffffff;
+}
+
+img[alt="Kulty"] {
+    bottom: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.real-button {
+    font-family: inherit;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    padding: 0.75rem 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.real-button img {
+    width: 20px;
+    margin-left: 1rem;
+}
+
+.field {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    position: relative;
+    height: 5rem;
+}
+
+.profile-field {
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field button {
+    border: none;
+    background: none;
+}
+
+.field .label {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.field .text {
+    font-size: 1.0625rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.validate {
+    margin: 3.5rem 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    font-family: inherit;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 1.125rem;
+    margin-right: 1rem;
+}
+.validate:disabled {
+    opacity: .25;
+}
+
+.styleless-button {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+label[for="pfp"] {
+    font-size: 0.9375rem;
+    margin: .5rem;
+}
+label[for="pfp"].styleless {
+    margin: 0;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border: #900300 12px solid;
+}
+
+.field:last-of-type {
+    display: block;
+    width: 80vw;
+    position: relative;
+    height: 200px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cover {
+    background-size: cover;  
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.cover::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 33%, rgba(0,0,0,1) 75%);
+    opacity: .7;
+    z-index: 6;
+}
+
+.text-in-cover {
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 7;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-bottom: .75rem
+}
+
+.input {
+    border-radius: 15px;
+    border: none;
+    font-family: inherit;
+    font-size: 1.0625rem;
+    height: 50px;
+    padding-left: 0.75rem;
+}
+
+.input + button {
+    position: absolute;
+    right: 0;
+}
+
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+button img {
+    width: 20px;
+    object-fit: cover;
+}
+
+.hide {
+    display: none;
+}

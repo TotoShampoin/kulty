@@ -1,0 +1,7 @@
+<script>
+    if ( sessionStorage.getItem("gotTosFrom") ) {
+        location.href = `/${sessionStorage.getItem("gotTosFrom")}`;
+    } else {
+        location.href = "/login#sign";
+    }
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Kulty</title>
+    <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="apple-touch-icon" href="/assets/logo/logo512_ios.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/assets/logo/logo96_ios.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/assets/logo/logo128_ios.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/logo192_ios.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/assets/logo/logo384_ios.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/logo512_ios.png">
+</head>
+<body>
+    <header>
+        <div class="head-name">
+            <a href="#" class="back">
+                <img src="/assets/icons/icone_retour_blanc.svg" alt="">
+            </a>
+            <a href="/settings/" class="settings">
+                <img src="/assets/icons/icone_roue_reglage.svg" alt="">
+            </a>
+            <div class="user_profile">
+                <img id="user_pic" src="" alt="">
+                <button class="add" id="user_like">
+                    <img src="/assets/icons/plus.svg" alt="S'abonner">
+                </button>
+                <h1 id="user_name"></h1>
+            </div>
+        </div>
+        <div class="head-header">
+            <div class="head-infos">
+                <div class="expo-counter" id="expo-counter">
+                    <div class="counter"></div>
+                    <div class="counter-tag">expositions aimées</div>
+                </div>
+                <div class="sub-counter" id="subs-counter">
+                    <div class="counter"></div>
+                    <div class="counter-tag">Abonnements</div>
+                </div>
+                <div class="sub-counter" id="subbed-counter">
+                    <div class="counter"></div>
+                    <div class="counter-tag">Abonnés</div>
+                </div>
+            </div>
+            <nav>
+                <button class="nav-button" data-type="expo">Expositions</button>
+                <button class="nav-button selected" data-type="cal">Calendrier</button>
+            </nav>
+            <div class="head-calendar">
+                <h2 class="cal-month" id="month"></h2>
+                <div class="cal-daylist">
+                    <div class="cal-days">
+                        <div class="dayname">L</div>
+                        <div class="dayname">M</div>
+                        <div class="dayname">M</div>
+                        <div class="dayname">J</div>
+                        <div class="dayname">V</div>
+                        <div class="dayname">S</div>
+                        <div class="dayname">D</div>
+                    </div>
+                    <div class="cal-days" id="cal-days">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="expolist">
+        <div class="grid main"></div>
+    </main>
+    <div class="bottom-bar">
+        <a href="/home/" class="bottom-button">
+            <img src="/assets/icons/icone_filaire_maison_noir.svg" alt="" class="icon-img">
+            <div class="bot-but-txt">Accueil</div>
+        </a>
+        <a href="/discover/" class="bottom-button">
+            <img src="/assets/icons/icone_filaire_boussole_noir.svg" alt="" class="icon-img">
+            <div class="bot-but-txt">Découvrir</div>
+        </a>
+        <a href="/profile/" class="bottom-button">
+            <img src="/assets/icons/icone_plein_profil_noir.svg" alt="" class="icon-img">
+            <div class="bot-but-txt">Profil</div>
+        </a>
+    </div>
+
+    <script src="/vendors/jquery-3.5.1.min.js"></script>
+    <script src="/vendors/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/vendors/jquery.mobile.custom.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "Kulty",
+    "short_name": "Kulty",
+    "theme_color": "#db0500",
+    "background_color": "#7f0700",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/home",
+    "icons": [{
+        "src": "/assets/logo/logo512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}

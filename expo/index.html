@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Kulty</title>
+    <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="/assets/logo/logo512_ios.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/assets/logo/logo96_ios.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/assets/logo/logo128_ios.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/logo192_ios.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/assets/logo/logo384_ios.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/logo512_ios.png">
+</head>
+<body>
+    <div class="expo">
+        <div class="header">
+            <div class="images" id="images">
+            </div>
+            <div class="dots" id="dots">
+            </div>
+            <a href="#" class="back"><img src="/assets/icons/icone_retour_blanc.svg" alt=""></a>
+            <button class="like"></button>
+            <h1 class="title" id="name"></h1>
+        </div>
+        <div class="expo-content">
+            <div class="expo-text">
+                <p class="dates">
+                    <span id="dateSt"></span> - 
+                    <span id="dateEd"></span>
+                </p>
+                <p class="musee">
+                    <span id="muse"></span><br>
+                    <span id="loc"></span>
+                </p>
+                <p class="desc" id="desc"></p>
+            </div>
+            <div class="expo-links">
+                <a href="" class="link loc">
+                    <img src="/assets/icons/icone_filaire_lieu_noir.svg" alt="" class="link-icon">
+                    <div class="link-name">Y aller</div>
+                </a>
+                <button class="link share">
+                    <img src="/assets/icons/icone_filaire_partage_noir.svg" alt="" class="link-icon">
+                    <div class="link-name">Partager</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/vendors/jquery-3.5.1.min.js"></script>
+    <script src="/vendors/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/vendors/jquery.mobile.custom.min.js"></script>
+    <script src="/vendors/jq-swipe.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

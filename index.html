@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulty</title>
+    <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <style>
+        body {
+            background-color: #DB0500;
+            color: #fff;
+            font-family: 'SFUI';
+        }
+        img {
+            display: block;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
+            border: none;
+        }
+        #message {
+            text-align: center;
+            padding: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="/assets/img/logo_vertical.svg" alt="Kulty">
+    <div id="message"></div>
+    <script>
+        function getSession() {
+            let result;
+            try {
+                let sess = {};
+                if( localStorage.getItem("session") != null ) {
+                    sess = JSON.parse(localStorage.getItem("session"));
+                } else {
+                    sess = {"user_ID": 1, "user_Name": "visiteur"}
+                }
+                if(navigator.userAgent.indexOf("Trident") != -1) {
+                    document.getElementById("message").innerText = "Kulty est incompatible avec Internet Explorer";
+                }/*  else if( !isRunningStandalone() ) {
+                    document.getElementById("message").innerText = "Ajoute Kulty sur ton écran d'accueil!\n(Pense aussi à nettoyer ton cache)";
+                } */ else if( sess.user_ID != 1 ) { 
+                    window.location.href = "/home";
+                } else {
+                    localStorage.removeItem("session");
+                    localStorage.removeItem("isVisitor");
+                    window.location.href = "/login";
+                }
+                return result;
+            } catch(e) {
+                document.getElementById("message").innerText = "Il y a eu une erreur en manipulant le localStorage";
+                console.error(e);
+            }
+        }
+        getSession();
+
+        function isRunningStandalone() {
+            return (window.matchMedia('(display-mode: standalone)').matches);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+}
+.expo {
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.header {
+    height: calc(100vh - 18rem);
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.images {
+    display: flex; height: calc(100vh - 17rem);
+    background: linear-gradient(180deg, rgba(219, 13, 21, 0.25) 0%, rgba(0, 0, 0, 0.7) 0%, rgba(71, 71, 71, 0) 23.8%, rgba(255, 255, 255, 0) 41.8%, rgba(0, 0, 0, 0.28) 57.2%, rgba(0, 0, 0, 0.62) 64.6%, rgba(0, 0, 0, 1) 85%);
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    overflow-x: scroll;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+
+.img {
+    /* height: 63vh; */
+    /* Do not repeat the image */
+    /* object-fit: cover;  */
+    background-position: center;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 100vw;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+.img::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - 17rem); */
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 75%);
+    opacity: .7;
+    z-index: 997;
+    pointer-events: none;
+}
+
+.desc img {
+    width: 100%;
+}
+
+.dots {
+    position: absolute;
+    top: 1rem;
+    display: flex;
+}
+.dot {
+    width: .5rem; height: .5rem;
+    border-radius: 50%;
+    background-color: #fff8;
+    margin: .25rem;
+}
+.dot.selected {
+    background-color: #fff;
+}
+
+.back {
+    position: absolute;
+    top: 1rem; left: 1rem; z-index: 999;
+    display: block;
+}
+.back img {
+    width: 3rem;
+}
+
+.like {
+    position: absolute;
+    bottom: 3rem; right: 1.5rem; z-index: 999;
+    width: 1.5rem; height: 1.5rem;
+    display: block;
+    border: none;
+    background: none;
+    background-image: url("/assets/icons/icone_filaire_coeur_blanc.svg");
+}
+.like.liked {
+    background-image: url("/assets/icons/icone_plein_coeur_rouge.svg");
+}
+
+.title {
+    -webkit-box-align : baseline;
+    align-self: flex-end;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0.5rem 4rem;
+    font-family: 'SFUI';
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 998;
+    position: absolute;
+}
+
+
+.expo-content {
+    border-radius: 15px 15px 0px 0px;
+    background-color: #ffffff;
+    position: relative;
+    /* top: -15px; */
+    z-index: 999;
+}
+
+.expo-text {
+    padding-top: 2rem;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.dates {
+    font-family: 'SFUI';
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 0;
+    margin-bottom: 1.010rem;
+    font-size: 1.25rem;
+}
+
+.musee {
+    margin-top: 0;
+    font-family: 'SFUI';
+    font-size: .9rem;
+}
+
+#muse {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.desc {
+    font-family: 'SFUI';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.expo-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.link {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.link-icon {
+    width: 2.5rem;
+}
+
+.link-name {
+    font-family: 'SFUI';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .75rem;
+    color: #000000;
+}
+
+.more {
+    color: #888;
+}

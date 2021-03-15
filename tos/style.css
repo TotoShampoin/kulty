@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SFUI', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 3rem 0;
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.back {
+    position: absolute;
+    padding: 2.9rem 0;
+}
+img {
+    width: 2.5rem;
+}
+
+p,h1,h2,h3 {
+    padding-left: 3.75rem;
+    padding-right: 3.125rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #DB0500;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #7F0F00;
+}
+
+p {
+    font-size: 0.75rem;
+    font-weight: normal;
+}

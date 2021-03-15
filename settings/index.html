@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulty</title>
+    <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="/assets/logo/logo512_ios.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/assets/logo/logo96_ios.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/assets/logo/logo128_ios.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/logo/logo192_ios.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/assets/logo/logo384_ios.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/logo/logo512_ios.png">
+</head>
+<body>
+    <img src="/assets/img/fond_reglage.svg" alt="" class="fond">
+    <main id="menu" style>
+        <a href="/profile/" class="back"><img src="/assets/icons/icone_retour_blanc.svg" alt="retour"></a>
+        <h1>Paramètres</h1>
+        <a href="#profile" class="link-button goto-href"><img src="/assets/icons/icone_filaire_profil_blanc.svg" alt="" class="button-icon"> Réglages du profil <img src="/assets/icons/icone_aller_blanc.svg" alt="" class="button-arrow"></a>
+        <hr>
+        <a href="/tos/cgu.html" class="link-button"><img src="/assets/icons/icone_terms_conditions.svg" alt="" class="button-icon"> Conditions Générales d'Utilisations <img src="/assets/icons/icone_aller_blanc.svg" alt="" class="button-arrow"></a>
+        <a href="/tos/legal.html" class="link-button"><img src="/assets/icons/icone_terms_conditions.svg" alt="" class="button-icon"> Mentions légales <img src="/assets/icons/icone_aller_blanc.svg" alt="" class="button-arrow"></a>
+        <hr>
+        <a href="mailto:contact@kulty.app?subject=Rapport%20de%20bug%3A" class="link-button"><img src="/assets/icons/icone_bug.svg" alt="" class="button-icon"> Rapporter un bug <img src="/assets/icons/icone_aller_blanc.svg" alt="" class="button-arrow"></a>
+        <a href="mailto:contact@kulty.app?subject=Contact%3A" class="link-button"><img src="/assets/icons/icone_ok-51.svg" alt="" class="button-icon"> Nous contacter / Proposer une amélioration <img src="/assets/icons/icone_aller_blanc.svg" alt="" class="button-arrow"></a>
+        <button class="real-button" id="unlog">
+            Déconnexion
+            <img src="/assets/icons/icone_exit-50.svg" alt="" class="button-img">
+        </button>
+    </main>
+    <main id="profile" style="display: none;">
+        <a href="#menu" class="back goto-href"><img src="/assets/icons/icone_retour_blanc.svg" alt="retour"></a>
+        <form>
+            <button type="submit" class="styleless-button validate" id="l-valid" disabled>Valider</button>
+            <div class="profile-field">
+                <label for="pfp" class="styleless"><img src="#" alt="" class="profile-pic" id="l-pfp"></label>
+                <input type="file" name="pfp" accept=".png, .jpeg, .jpg" id="pfp" class="hide"> <!-- Il faut cacher ce input, avec un display:none par exemple! Le plus important, c'est le label -->
+                <label for="pfp" class="styleless-button">Changer la photo de profil</label>
+            </div>
+            <hr>
+            <div class="field">
+                <label class="label">Pseudo</label>
+                <div class="text" id="l-name"></div>
+            </div>
+            <hr>
+            <div class="field">
+                <label class="label">Mail</label>
+                <div class="text" id="l-mail"></div>
+            </div>
+            <hr>
+            <div class="field">
+                <label class="label">Mot de passe</label>
+                <button class="styleless-button" id="new-pass"><img src="/assets/icons/icone_pen.svg" alt=""></button>
+            </div>
+            <div class="field">
+            </div>
+        </form>
+    </main>
+    <img src="/assets/img/logo_blanc.svg" alt="Kulty">
+    <script src="/vendors/jquery-3.5.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

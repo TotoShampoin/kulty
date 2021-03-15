@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Kulty</title>
+    <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="oldpass" style="display: none;">
+        <form>
+            <fieldset class="form-box">
+                <h1><img src="/assets/img/logo_blanc.svg" alt="Kulty" class="title-image"></h1>
+                <input type="password" name="pass" id="o-pass" class="form-text" placeholder="Ancien mot de passe" required>
+                <a href="#mail" class="form-link">Mots de passe oublié ?</a>
+            </fieldset>
+            <button type="submit" class="form-button">Changer de mot de passe</button>
+        </form>
+    </main>
+    <main id="invalid">
+        <a href="/login/" class="back"><img src="/assets/icons/icone_retour_blanc.svg" alt="retour"></a>
+        <div class="form-box">
+            <h1><img src="/assets/img/logo_blanc.svg" alt="Kulty" class="title-image"></h1>
+            <p class="text message">L'adresse fournie est invalide</p>
+        </div>
+    </main>
+    <main id="newpass" style="display: none;">
+        <a href="#profile" class="back"><img src="/assets/icons/icone_retour_blanc.svg" alt="retour"></a>
+        <form>
+            <fieldset class="form-box">
+                <h1><img src="/assets/img/logo_blanc.svg" alt="Kulty" class="title-image"></h1>
+                <input type="password" name="pass" id="n-pass1" class="form-text" placeholder="Nouveau mot de passe" required>
+                <input type="password" name="pass" id="n-pass2" class="form-text" placeholder="Confirmation du mdp" required>
+            </fieldset>
+            <button type="submit" class="form-button">Connexion</button>
+        </form>
+    </main>
+    <main id="mail" style="display: none;">
+        <a href="#oldpass" class="back"><img src="/assets/icons/icone_retour_blanc.svg" alt="retour"></a>
+        <form>
+            <fieldset class="form-box">
+                <h1><img src="/assets/img/logo_blanc.svg" alt="Kulty" class="title-image"></h1>
+                <h2 class="small-title">Mot de passe oublié</h2>
+                <input type="email" name="mail" id="m-mail" class="form-text" placeholder="(À venir)" disabled>
+            </fieldset>
+            <button type="submit" class="form-button">Envoyer</button>
+        </form>
+    </main>
+    <script src="/vendors/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

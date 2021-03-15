@@ -1,0 +1,346 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "SFUI", Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    height: calc(96vh - 18rem);
+    display: flex;
+    position: relative;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.cate-img {
+    height: calc(96vh - 17rem);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #cccccc;
+    /* height: 63vh; */
+    /* object-fit: cover; */
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.cate-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(to bottom, rgba(0,0,0,0) 33%, rgba(0,0,0,1) 75%); */
+    background: linear-gradient(
+180deg
+, rgba(219, 13, 21, 0.25) 0%, rgba(0, 0, 0, 0.7) 0%, rgba(71, 71, 71, 0) 23.8%, rgba(255, 255, 255, 0) 41.8%, rgba(0, 0, 0, 0.28) 57.2%, rgba(0, 0, 0, 0.62) 64.6%, rgba(0, 0, 0, 1) 85%);
+    opacity: .7;
+    z-index: 997;
+}
+
+.title {
+    -webkit-box-align: baseline;
+    align-self: flex-end;
+    text-align: center;
+    color: #ffffff;
+    width: 100vw;
+    margin: 0;
+    padding: 0.5rem 4rem;
+    font-family: 'SFUI';
+    font-weight: bold;
+    font-size: 1.75rem;
+    z-index: 998;
+    position: absolute;
+}
+
+.back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    display: block;
+}
+.back img {
+    width: 3rem;
+}
+
+header .like {
+    position: absolute;
+    bottom: 3rem;
+    right: 1.5rem;
+    z-index: 999;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    border: none;
+    background: none;
+    padding: .5rem;
+}
+
+header .like .icon {
+    right: .5rem;
+    bottom: .5rem;
+    width: 1.5rem;
+}
+
+main {
+    border-radius: 15px 15px 0px 0px;
+    background-color: #ffffff;
+    position: relative;
+    /* top: -15px; */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: wrap;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    align-self: flex-end;
+    max-width: 100vw;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.top10 {
+    display: flex;
+    padding-top: 3rem;
+}
+
+.top10-title {
+    position:absolute;
+    padding-left:20px;
+    margin-top: -15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.t10t-1 {
+    font-size: 2rem;
+    bottom: -20px;
+    position: relative;
+
+}
+
+.t10t-2 {
+    font-size: 3rem;
+    bottom: -10px;
+    position: relative;
+}
+
+.t10t-3 {
+    font-size: 1.5rem;
+    top: -8px;
+    position: relative;
+}
+
+.top10-content {
+    padding-left: 90px;
+}
+
+.top10-expo {
+    min-width: 225px;
+    min-height: 110px;
+    border-radius: 15px;
+    margin-right: 5px;
+    position: relative;
+    font-size: 0.75rem;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+}
+
+.topLatest-expo::after, .top10-expo::after, .topCate-expo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 75%);
+    opacity: .7;
+    z-index: 997;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+.latest-title {
+    font-size: 1.375rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.expo-img {
+    width: 100%;
+    height: 100%;
+    /* min-height: 110px; */
+    border-radius: 15px;
+    position: absolute;
+    z-index: 997;
+    object-fit: cover;
+}
+
+.expo-title {
+    z-index: 1000;
+    position: absolute;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+button {
+    border: none;
+    background: none;
+    filter: none;
+    z-index: 1000;
+}
+
+.like {
+    margin:0; padding: 5px;
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+}
+.icon {
+    display: block;
+    width: 1.2rem;
+}
+
+.latest-content {
+    display: grid;
+    grid-template-columns: repeat(3, var(--size));
+    grid-auto-rows: calc(var(--size)/2 - var(--gap)/2);
+    row-gap: var(--gap);
+    column-gap: var(--gap);
+}
+
+
+:root {
+    --size: 110px;
+    --gap: 5px;
+}
+
+.ex1,
+.ex2 {
+    width: var(--size);
+    background-color: #cccccc;
+    min-width: 110px;
+    min-height: 110px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    font-size: 0.75rem;
+}
+
+.ex1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 75%);
+    opacity: .7;
+    z-index: 999;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+.ex2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 75%);
+    opacity: .7;
+    z-index: 999;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+
+.ex1 {
+    grid-row: auto / span 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 996;
+}
+
+.ex2 {
+    grid-row: auto / span 3;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 996;
+}
+
+.bottom-bar {
+
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(249, 249, 249, 0.95);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 50px;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-button {
+    font-family: "SFUI", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.icon-img {
+    width: 25px;
+}
+
+.mask {
+    opacity: 0;
+}
