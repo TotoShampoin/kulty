@@ -23,7 +23,7 @@ img {
     width: 2.5rem;
 }
 
-p,h1,h2,h3 {
+p,h1,h2,h3,ul {
     padding-left: 3.75rem;
     padding-right: 3.125rem;
 }
@@ -38,7 +38,15 @@ h3 {
     color: #7F0F00;
 }
 
-p {
+p,ul {
     font-size: 0.75rem;
     font-weight: normal;
+}
+
+p:last-of-type {
+    margin-bottom: 3rem;
+}
+
+ul {
+    list-style-type: none;
 }
