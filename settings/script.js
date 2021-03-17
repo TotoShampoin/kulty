@@ -90,7 +90,7 @@ function place_user_infos({user_Name, user_PFP, user_Email}) {
     let is_masked = true;
     const masked_mail = maskMail(user_Email);
     $("#l-name").html(user_Name);
-    $("#l-pfp").attr("src", `https://cdn.kulty.app/pfp/${user_PFP ? user_PFP : "default.jpg"}`);
+    $("#l-pfp").attr("src", `https://cdn.kulty.app/pfp/${user_PFP ? user_PFP : "default.jpg"}?size=135`);
     $("#l-mail").html(masked_mail);
     $("#l-mail").parents(".field").click(function(e) {
         e.preventDefault();

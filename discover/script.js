@@ -63,7 +63,7 @@ function place_search(type, list) {
                 let {play, type: type_} = element;
                 $(`.search-list[data-type="cate"] .search-content`).append(
                     `<div href="#" class="search-elmt search-cate" data-type="${type_}" data-play="${play[`${type_}_ID`]}">
-                        <div class="search-cate-img" style="background-image: url('https://cdn.kulty.app/${type_}/${play[`${type_}_Photo`]==null?"default.jpg":play[`${type_}_Photo`]}')"></div>
+                        <div class="search-cate-img" style="background-image: url('https://cdn.kulty.app/${type_}/${play[`${type_}_Photo`]==null?"default.jpg":play[`${type_}_Photo`]}?size=96')"></div>
                         <p class="search-title">${play[`${type_}_Name`]}</p>
                     </div>`)
             });
@@ -78,7 +78,7 @@ function place_search(type, list) {
             list.forEach(element => {
                 $(`.search-list[data-type="${type}"] .search-content`).append(
                     `<div href="#" class="search-elmt search-${type}" data-type="${type}" data-play="${element[`${type}_ID`]}">
-                        <div class="search-${type}-img" style="background-image: url('https://cdn.kulty.app/${type_}/${element[`${type}_Photo`]==null?"default.jpg":element[`${type}_Photo`]}')"></div>
+                        <div class="search-${type}-img" style="background-image: url('https://cdn.kulty.app/${type_}/${element[`${type}_Photo`]==null?"default.jpg":element[`${type}_Photo`]}?size=96')"></div>
                         <p class="search-title">${element[`${type}_Name`]}</p>
                     </div>`)
             });
@@ -153,9 +153,9 @@ async function place_discover(section, elmt, type, model = "") {
     if(section == "topLatest") section_ = "latest"; else section_ = section;
     let url = "";
     if(elmt.photo != null) {
-        url = `https://cdn.kulty.app/${type}/${elmt.photo}`;
+        url = `https://cdn.kulty.app/${type}/${elmt.photo}?size=225`;
     } else {
-        url = `https://cdn.kulty.app/expo/noimg.jpg`;
+        url = `https://cdn.kulty.app/expo/noimg.jpg?size=225`;
     }
     $(`.${section}-content`).append(`<div href="#" class="${section}-expo expo ${model}" data-type="${type}" data-play="${elmt.id}" data-section="${section_}">
     <img src="${url}" alt="" class="expo-img">

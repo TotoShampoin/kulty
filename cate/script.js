@@ -22,7 +22,7 @@ async function get_info(id, type) {
 }
 function place_info(info, type) {
     $("#name").text(info.name);
-    $(".cate-img").css("background-image", `url("https://cdn.kulty.app/${type}/${info.photo}")`)
+    $(".cate-img").css("background-image", `url("https://cdn.kulty.app/${type}/${info.photo}?size=${window.innerWidth}")`)
 }
 
 async function fetch_like_cate(user, id, type) {
@@ -149,9 +149,9 @@ async function place_expo(expo, section, ex = undefined) {
     }
     let url = "";
     if(expo.photo != null) {
-        url = `https://cdn.kulty.app/expo/${expo.photo}`;
+        url = `https://cdn.kulty.app/expo/${expo.photo}?size=225`;
     } else {
-        url = `https://cdn.kulty.app/expo/noimg.jpg`;
+        url = `https://cdn.kulty.app/expo/noimg.jpg?size=225`;
     }
     $(`.${section}-content`).append(`<div href="#" class="${section}-expo expo${ex?` ex${ex}`:""}" data-expo="${expo.id}"><img src="${url}" alt="" class="expo-img"><h3 class="expo-title">${expo.name}</h3></div>`);
     if(section == "top10") {

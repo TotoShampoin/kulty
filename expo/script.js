@@ -84,16 +84,16 @@ function update() {
     let i = 0;
     for(let pic of values["photos"]) {
         $("#images").append(`<div class="img" id="img-${i}"></div>`);
-        $(`#img-${i}`).css("background-image", `url(https://cdn.kulty.app/expo/${pic})`);
+        $(`#img-${i}`).css("background-image", `url(https://cdn.kulty.app/expo/${pic}?size=${window.innerWidth})`);
         $("#dots").append(`<div class="dot" id="dot-${i}"></div>`);
         i++;
     }
     if(values["photos"].length == 0) {
         $("#images").append(`<div class="img" id="img-0"></div>`);
-        $(`#img-0`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg)`);
+        $(`#img-0`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg?size=${window.innerWidth})`);
         $("#dots").append(`<div class="dot" id="dot-0"></div>`);
     }
-    $("#header").css("background-image", `url("https://cdn.kulty.app/expo/${values["photos"][0]}")`);
+    $("#header").css("background-image", `url("https://cdn.kulty.app/expo/${values["photos"][0]}?size=${window.innerWidth}")`);
     updateDots();
 }
 

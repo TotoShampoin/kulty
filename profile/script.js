@@ -28,7 +28,7 @@ function place_user_infos({user_Name, user_PFP, followers, following, liked_expo
     const user = window.location.search.slice(1).split("=")[1];
     const session = get_session().user_ID;
     $("#user_name").html(user_Name);
-    $("#user_pic").attr("src", `https://cdn.kulty.app/pfp/${user_PFP ? user_PFP : "default.jpg"}`);
+    $("#user_pic").attr("src", `https://cdn.kulty.app/pfp/${user_PFP ? user_PFP : "default.jpg"}?size=68`);
     $("#expo-counter .counter").html(liked_expos);
     $("#subbed-counter .counter").html(followers);
     $("#subs-counter .counter").html(following);
@@ -109,7 +109,7 @@ function place_expo({expo_ID, expo_Name, muse_Name, photo}, type, isLong) {
         }
         $('.main').append(
             `<div class="expo expo-long" data-expo="${expo_ID}">
-            <img class="expoimg" src="https://cdn.kulty.app/expo/${photo}" alt="">
+            <img class="expoimg" src="https://cdn.kulty.app/expo/${photo}?size=${Math.floor(window.innerWidth*.90)}" alt="">
                 <div class="long-text">
                     <h3>${expo_Name}</h3>
                     <p>${muse_Name}</p>
@@ -123,7 +123,7 @@ function place_expo({expo_ID, expo_Name, muse_Name, photo}, type, isLong) {
         }
         $('.main').append(
             `<div class="expo expo${isLong}" data-expo="${expo_ID}">
-                <img class="expoimg" src="https://cdn.kulty.app/expo/${photo}" alt="">
+                <img class="expoimg" src="https://cdn.kulty.app/expo/${photo}?size=110" alt="">
                 <p class="expo-p">${expo_Name}</p>
             </div>`
         );
@@ -154,9 +154,9 @@ async function get_last_expo_pic(user) {
 }
 function place_background(photo) {
     if(photo) {
-        $(".head-name").css("background-image", `url("https://cdn.kulty.app/expo/${photo}")`);
+        $(".head-name").css("background-image", `url("https://cdn.kulty.app/expo/${photo}?size=${window.innerWidth}")`);
     } else {
-        $(".head-name").css("background-image", `url("https://cdn.kulty.app/expo/noimg.jpg")`);
+        $(".head-name").css("background-image", `url("https://cdn.kulty.app/expo/noimg.jpg?size=${window.innerWidth}")`);
     }
 }
 

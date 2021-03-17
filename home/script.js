@@ -152,15 +152,15 @@ function placePlaylist(playlist, type) {
     $("#category-container").append(`
         <div class="category" id="${type[0]}${id}" data-type="${type}" data-play="${id}">
             <div class="category-title">
-                <div class="category-img hasImg" style="background-image: url(&quot;https://cdn.kulty.app/cate/theme/street_art.jpg&quot;);"></div>
+                <div class="category-img hasImg" style="background-image: url(&quot;https://cdn.kulty.app/cate/theme/street_art.jpg&quot;?size=30);"></div>
                 <h2>${name}</h2>
             </div>
             <div class="category-expo-list">
             </div>
         </div>`);
-    $(`#${type[0]}${id} .category-img`).css("background-image", `url(https://cdn.kulty.app/${type}/${photo})`);
+    $(`#${type[0]}${id} .category-img`).css("background-image", `url(https://cdn.kulty.app/${type}/${photo}?size=30)`);
     if(photo == undefined) {
-        $(`#${type[0]}${id} .category-img`).css("background-image", `url(https://cdn.kulty.app/${type}/noimg.jpg)`);
+        $(`#${type[0]}${id} .category-img`).css("background-image", `url(https://cdn.kulty.app/${type}/noimg.jpg?size=30)`);
     }
 }
 function placeFriend(frie) {
@@ -172,7 +172,7 @@ function placeFriend(frie) {
     }
     $("#friend-carousel").append(`
         <div class="friend-icon" id="fl${frieID}">
-            <img src="https://cdn.kulty.app/pfp/${friePFP}" class="friend-img hasImg" alt="">
+            <img src="https://cdn.kulty.app/pfp/${friePFP}?size=70" class="friend-img hasImg" alt="">
             <div class="friend-name">
                 ${frieName}
             </div>
@@ -180,7 +180,7 @@ function placeFriend(frie) {
     $("#friend-expo-list").append(`
         <div class="friend-expo" id="f${frieID}" data-type="frie" data-play="${frieID}">
         </div>`);
-    $(`#fl${frieID} .category-title`).css("background-image", `url(https://cdn.kulty.app/pfp/${friePFP})`);
+    $(`#fl${frieID} .category-title`).css("background-image", `url(https://cdn.kulty.app/pfp/${friePFP}?size=${window.innerWidth})`);
 }
 function placeExpo(expo, playlist, type) {
     let expoID = expo["expo_ID"], 
@@ -223,9 +223,9 @@ function placeExpo(expo, playlist, type) {
     }
     let $expo = $(`#${type[0]}${playlist}-e${expoID}`)
     if(expoPhoto[0] == undefined) {
-        $expo.css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg)`);
+        $expo.css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg?size=265)`);
     } else {
-        $expo.css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]})`);
+        $expo.css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]}?size=265)`);
     }
     if(type[0]=="f") {
         $(`#f${playlist}-e${expoID}`).append(`
@@ -250,9 +250,9 @@ function placeExpoFeed(expo) {
                 ${museName}</p>
             </div>
         </div>`);
-    $(`#top-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]})`);
+    $(`#top-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]}?size=${window.innerWidth})`);
     if(expoPhoto[0] == undefined) {
-        $(`#top-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg)`);
+        $(`#top-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg?size=${window.innerWidth})`);
     }
     if(expoName.length > 24) expoName = expoName.slice(0,24) + "...";
     if(museName.length > 28) museName = museName.slice(0,28) + "...";
@@ -270,9 +270,9 @@ function placeExpoFeed(expo) {
             <a href="#" class="link more">Plus d'infos ></a>
         </div>
     </div>`);
-    $(`#top-micro-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]})`);
+    $(`#top-micro-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/${expoPhoto[0]}?size=110)`);
     if(expoPhoto[0] == undefined) {
-        $(`#top-micro-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg)`);
+        $(`#top-micro-e${expoID}`).css("background-image", `url(https://cdn.kulty.app/expo/noimg.jpg?size=110)`);
     }
 }
 
@@ -583,4 +583,6 @@ $(document).ready(() => {
     $(".top-expo-micro .more").click(setClick2);
     $(".expo").click(setClick);
     $(".category-title").click(setClick3);
+
+    $("html").css("--vh", `${window.innerHeight/100}px`);
 });
