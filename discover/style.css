@@ -336,11 +336,7 @@ body {
 
     position: fixed;
     bottom: 0;
-<<<<<<< HEAD
     z-index: 9999;
-=======
-    z-index: 9999;
->>>>>>> af6d9a2da3644e78e0c22f6b3be43995a3c4c818
     display: flex;
     align-items: center;
     justify-content: space-around;
