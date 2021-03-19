@@ -95,6 +95,7 @@ function update() {
     }
     $("#header").css("background-image", `url("https://cdn.kulty.app/expo/${values["photos"][0]}?size=${window.innerWidth}")`);
     updateDots();
+    load_end();
 }
 
 // function scrollParalax() {

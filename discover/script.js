@@ -304,4 +304,5 @@ $(document).ready(function() {
             $title.removeClass("mask");
         }
     })
+    load_end();
 });
