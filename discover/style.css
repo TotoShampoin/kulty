@@ -393,7 +393,8 @@ button {
 }
 
 .search-expo-img, .search-cate-img, .search-user-img {
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
 }
 .search-expo-img,.search-cate-img {
     border-radius: 5px;

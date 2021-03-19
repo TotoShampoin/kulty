@@ -3,15 +3,13 @@
 $(document).ready(async function () {
     const isValid = await checkValidity();
     if(isValid) {
-        updateMenu("oldpass");
+        updateMenu("newpass");
         $("input").each(function() {
             this.oninput = e => {
                 e.target.setCustomValidity("");
             }
         })
-        $("#oldpass form").submit(login);
         $("#newpass form").submit(changepass);
-        $("#mail form").submit(sendmail);
     } else {
         updateMenu("invalid");
     }
@@ -25,30 +23,15 @@ function updateMenu(hash = location.hash) {
 
 async function checkValidity() {
     const param = new URLSearchParams(location.search);
-        const sid   = param.get("sid");
+        const sid   = param.get("id");
         const name  = param.get("name");
     const response = await fetch(`https://api.kulty.app/user_log/check_reset_pass.php?sid=${sid}&name=${name}`)
     const result = await response.json();
     return result;
 }
-
-async function login(e) {
-    e.preventDefault();
-    const log  = JSON.parse(localStorage.getItem("session")).user_Name;
-    const pass = $("#o-pass" ).val();
-
-    const con = await post("https://api.kulty.app/user_log/connect_user.php", { name: log, pass: pass });
-    if( con.state ) {
-        updateMenu("newpass");
-    } else {
-        $("#o-pass")[0].setCustomValidity("Le mot de passe est incorrect");
-        $("#o-pass")[0].reportValidity();
-    }
-    console.log(con);
-}
 async function changepass(e) {
     e.preventDefault();
-    const log  = JSON.parse(localStorage.getItem("session")).user_Name;
+    const log  = new URLSearchParams(location.search).get("name");
     const pass  = $("#n-pass1").val();
     const pass2 = $("#n-pass2").val();
 
@@ -71,9 +54,6 @@ async function changepass(e) {
             $("#n-pass2")[0].reportValidity();
         }
     }
-}
-function sendmail(e) {
-    e.preventDefault();
 }
 
 async function isLoginAvailable(log, mail) {
