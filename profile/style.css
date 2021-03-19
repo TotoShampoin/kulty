@@ -71,8 +71,10 @@ header>div, nav, .expolist-expo, .expo {
     z-index: 999;
     display: block;
 }
-.settings img {
+
+.gear {
     width: 2.5rem;
+    filter: drop-shadow(0 0 6px #000000);
 }
 
 .add {
