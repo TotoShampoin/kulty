@@ -38,6 +38,8 @@ async function login(e) {
         if( setSession(con.id, log) ) {
             window.location.href = "/home";
         }
+    } else {
+        alert("Le login ou mot de passe est incorrect");
     }
     console.log(con);
 }
