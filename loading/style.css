@@ -1,0 +1,40 @@
+.popup {
+    position: absolute;
+    top: 50%; left: 50%;
+    z-index: 5000;
+    width: 10rem; height: 8rem;
+    transform: translate(-50%, -50%);
+    background-color: #DB0500;
+    border-radius: 1.5rem;
+    box-shadow: 0 .125rem 2rem 0 #000;
+}
+.loading {
+    position: absolute;
+    top: 50%; left: 50%;
+    z-index: 5000;
+    transform: translate(-50%, -50%);
+    width: 1.5rem; height: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.loading.dot-one {
+    animation: hori-swing 1s cubic-bezier(.365, 0, .635, 1) -.5s alternate infinite;
+}
+.loading.dot-two {
+    animation: vert-swing 1s cubic-bezier(.365, 0, .635, 1) alternate infinite;
+}
+
+@keyframes hori-swing {
+    0% {
+        transform: translate(-200%, -50%);
+    } 100% {
+        transform: translate(100%, -50%);
+    }
+}
+@keyframes vert-swing {
+    0% {
+        transform: translate(-50%, -200%);
+    } 100% {
+        transform: translate(-50%, 100%);
+    }
+}

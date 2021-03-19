@@ -361,6 +361,7 @@ $(document).ready(function() {
         e.preventDefault();
         window.location.href = "/discover/";
     })
+    load_end();
 });
 
 function rem() {

@@ -436,6 +436,7 @@ function update() {
         updateLikeButtons(elmt.expo_ID)
     });
     setButtons();
+    load_end();
 }
 
 var isScrolling = false;

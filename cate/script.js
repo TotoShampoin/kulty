@@ -273,4 +273,5 @@ $(document).ready(function() {
     // $(document).scroll(() => {
     //     paralax();
     // });
+    load_end();
 });

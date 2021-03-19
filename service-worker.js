@@ -1,18 +1,18 @@
 // PWA Code adapted from https://github.com/pwa-builder/PWABuilder
 const CACHE = "pwa-precache-v1";
 const precacheFiles = [
-  "/assets",
-  "/cate",
-  "/discover",
-  "/expo",
-  "/home",
-  "/login",
-  "/profile",
-  "/settings",
-  "/tos",
-  "/vendors",
-  "/favicon.ico",
-  "/index.html"
+  "/cate/index.html", "/cate/script.js", "/cate/style.css", 
+  "/discover/index.html", "/discover/script.js", "/discover/style.css", 
+  "/expo/index.html", "/expo/script.js", "/expo/style.css", 
+  "/home/index.html", "/home/script.js", "/home/style.css", 
+  "/loading/script.js", "/loading/style.css", 
+  "/login/index.html", "/login/script.js", "/login/style.css", 
+  "/login/reset/index.html", "/login/reset/script.js", "/login/reset/style.css", 
+  "/profile/index.html", "/profile/script.js", "/profile/style.css", 
+  "/settings/index.html", "/settings/script.js", "/settings/style.css", 
+  "/settings/newpass/index.html", "/settings/newpass/script.js", "/settings/newpass/style.css", 
+  "/tos/cgu.html", "/tos/index.html", "/tos/legal.html", "/tos/style.css", "/vendors/jq-swipe.js", 
+  "/vendors/jquery-3.5.1.min.js", "/vendors/jquery-migrate-3.3.2.min.js", "/vendors/jquery.ba-dotimeout.min.js", "/vendors/jquery.mobile-1.4.5.min.map", "/vendors/jquery.mobile.custom.min.js", "/vendors/jquery.mobile.min.js"
 ];
 
 self.addEventListener("install", function (event) {

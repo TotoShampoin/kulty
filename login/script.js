@@ -71,22 +71,27 @@ async function signup(e) {
         if(!isLogOk) {
             $("#s-mail")[0].setCustomValidity("L'identifiant ou l'email figure déjà dans nos bases de données");
             $("#s-mail")[0].reportValidity();
+            alert("L'identifiant ou l'email figure déjà dans nos bases de données");
         }
         if(!isPassOk) {
             $("#s-pass")[0].setCustomValidity("Le mot de passe doit contenir au minimum 8 caractères dont une lettre majuscule, une minuscule, un chiffre et un caractère spécial");
             $("#s-pass")[0].reportValidity();
+            alert("Le mot de passe doit contenir au minimum 8 caractères dont une lettre majuscule, une minuscule, un chiffre et un caractère spécial");
         }
         if(!isPass2Ok) {
             $("#s-pass2")[0].setCustomValidity("Les deux mots de passes ne correspondent pas");
             $("#s-pass2")[0].reportValidity();
+            alert("Les deux mots de passes ne correspondent pas");
         }
         if(!isAgeOk) {
             $("#s-age")[0].setCustomValidity("Vous devez avoir plus de 16 ans pour utiliser Kulty");
             $("#s-age")[0].reportValidity();
+            alert("Vous devez avoir plus de 16 ans pour utiliser Kulty");
         }
         if(!isTosOk) {
             $("#s-tos")[0].setCustomValidity("Vous devez accepter nos conditions d'utilisation pour utiliser Kulty");
             $("#s-tos")[0].reportValidity();
+            alert("Vous devez accepter nos conditions d'utilisation pour utiliser Kulty");
         }
     }
 }
