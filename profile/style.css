@@ -252,8 +252,6 @@ nav {
 .expo2 {
     width: var(--size);
     background-color: #cccccc;
-    width: 110px;
-    min-height: 110px;
     color: #ffffff;
     text-decoration: none;
     border-radius: 15px;
