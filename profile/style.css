@@ -447,8 +447,9 @@ nav {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     width: 100vw;
-    /* height: 50px; */
-    padding-bottom: env(safe-area-inset-bottom,1rem);
+    height: 50px;
+    padding-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom,0);
 }
 
 .bottom-button {

@@ -523,8 +523,9 @@ a {
     justify-content: space-around;
     background-color: rgb(249,249,249,0.95);
     width: 100vw;
-    /* height: 50px; */
-    padding-bottom: env(safe-area-inset-bottom);
+    height: 50px;
+    padding-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom,0);
 }
 
 .bottom-button {
