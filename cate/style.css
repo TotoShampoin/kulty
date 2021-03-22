@@ -81,6 +81,7 @@ header {
     left: 1rem;
     z-index: 999;
     display: block;
+    margin-top: env(safe-area-inset-top,0);
 }
 .back img {
     width: 3rem;

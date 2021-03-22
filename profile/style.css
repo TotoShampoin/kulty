@@ -74,6 +74,7 @@ header>div, nav, .expolist-expo, .expo {
 
 .gear {
     width: 2.5rem;
+    margin-top: env(safe-area-inset-top,0);
 }
 
 .add {

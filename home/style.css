@@ -41,6 +41,7 @@ a {
     background: linear-gradient(0deg, rgba(119,5,0,1) 0%, rgba(219,5,0,1) 40%, rgba(219,5,0,1) 100%);
     position: relative;
     z-index: -1;
+    padding-top: env(safe-area-inset-top,0);
 }
 
 .logo {
@@ -48,6 +49,7 @@ a {
     top: 10px;
     position: fixed;
     z-index: 0;
+    padding-top: env(safe-area-inset-top,0);
 }
 
 .content {

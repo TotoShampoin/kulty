@@ -76,6 +76,7 @@ body {
     position: absolute;
     top: 1rem;
     display: flex;
+    margin-top: env(safe-area-inset-top,0);
 }
 .dot {
     width: .5rem; height: .5rem;
@@ -91,6 +92,7 @@ body {
     position: absolute;
     top: 1rem; left: 1rem; z-index: 999;
     display: block;
+    margin-top: env(safe-area-inset-top,0);
 }
 .back img {
     width: 3rem;
