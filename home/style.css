@@ -24,6 +24,7 @@ a {
 }
 
 .screen {
+    min-height: 100vh;
     padding-bottom: 50px;
     margin-top: -15px;
     background: rgb(174,5,0,1);
