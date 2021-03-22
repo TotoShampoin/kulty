@@ -1,15 +1,36 @@
 "use strict";
 
 $(document).ready(function () {
+    if( sessionStorage.getItem("signform") ) {
+        const { log, mail, age, pass, pass2, tos } = JSON.parse(sessionStorage.getItem("signform"));
+        $("#s-login").val(log);
+        $("#s-mail" ).val(mail);
+        $("#s-age"  ).val(age);
+        $("#s-pass" ).val(pass);
+        $("#s-pass2").val(pass2);
+        $("#s-tos"  ).prop("checked", tos);
+        sessionStorage.removeItem("signform");
+    }
     localStorage.removeItem("session");
     if(document.location.hash == "") {
         document.location.hash = "main";
     }
     updateMenu();
-    $("a").click(function() {
+    $("a.a").click(function() {
         document.location.hash = $(this).attr("href");
         updateMenu();
     });
+    $("a.out").click(function(e) {
+        e.preventDefault();
+        const log   = $("#s-login").val();
+        const mail  = $("#s-mail" ).val();
+        const age   = $("#s-age"  ).val();
+        const pass  = $("#s-pass" ).val();
+        const pass2 = $("#s-pass2").val();
+        const tos   = $("#s-tos"  ).prop("checked");
+        sessionStorage.setItem("signform", JSON.stringify({ log, mail, age, pass, pass2, tos }));
+        location = $(this).attr("href");
+    })
     $("input").each(function() {
         this.oninput = e => {
             e.target.setCustomValidity("");

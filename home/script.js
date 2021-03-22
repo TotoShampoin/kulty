@@ -586,4 +586,7 @@ $(document).ready(() => {
     $(".category-title").click(setClick3);
 
     $("html").css("--vh", `${window.innerHeight/100}px`);
+    $(window).resize(function() {
+        $("html").css("--vh", `${window.innerHeight/100}px`);
+    })
 });

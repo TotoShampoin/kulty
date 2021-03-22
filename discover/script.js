@@ -263,6 +263,8 @@ function redirect(type, play, context) {
 function update(e) {
     const $this = $(this);
     const val = $this.val();
+    $(".search").removeClass("hasMore");
+    $(".search-list").removeClass("more");
     if(val.length > 0) {
         $(".search").removeClass("hide");
         $(".discover").addClass("hide");
