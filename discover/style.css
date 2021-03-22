@@ -41,7 +41,7 @@ body {
     height: 30px;
     border-radius: 10px;
     align-items: center;
-    margin: calc(env(safe-area-inset-top,0) + 25px) 0;
+    margin: calc(env(safe-area-inset-top,0) + 25px) 0 25px 0;
 }
 
 .search-icon {
