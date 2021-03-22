@@ -453,7 +453,7 @@ function getScroll() {
 
         if(!isScrolling && scrollPos == $(window).width()*position) {
             $("#top-expo-micro-list").animate(
-                {scrollLeft: position==0?0:115*index-11}, 
+                {scrollLeft: position==0?0:115*scrollPos-11}, 
                 500, 'swing');
         }
     });
