@@ -75,7 +75,7 @@ a {
 
 .top-content {
     position: relative;
-    height: calc(100 * var(--vh) - 4rem);
+    height: calc(100 * var(--vh) - 4rem - env(safe-area-inset-top,0));
     display: flex;
     margin-bottom:3px;
     border-radius:18px;
