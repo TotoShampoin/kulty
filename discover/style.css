@@ -305,7 +305,7 @@ body {
 }
 
 .latest {
-    margin-bottom: 50px;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 50px);
     display: flex;
     align-items: center;
     flex-direction: column;
